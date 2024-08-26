@@ -6,10 +6,12 @@ const router = express.Router();
 
 type RequestBody = {
   message: string;
+  messages: any;
 };
 
 router.post("/chat", async (req, res) => {
   const body: RequestBody = req.body;
+  const messages = body.messages;
 
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
   res.setHeader("Transfer-Encoding", "chunked");
@@ -20,7 +22,7 @@ router.post("/chat", async (req, res) => {
   
   const response = await ollama.chat({
     model: model,
-    messages: [{ role: "user", content: body.message }],
+    messages: messages,
     stream: true,
   });
 
