@@ -2,10 +2,11 @@ import express from "express";
 import cors from "cors";
 import chat from "./routes/chat";
 import { corsOptions } from "./cors";
+import { API_PORT } from "./constants";
 
 function main() {
   const app = express();
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT ?? API_PORT ?? 8080;
 
   app.use(cors(corsOptions));
   app.use(express.json());
