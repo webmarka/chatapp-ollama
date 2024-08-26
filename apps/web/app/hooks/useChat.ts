@@ -16,6 +16,13 @@ export const useChat = () => {
     setMessage(message, Role.USER);
     setIsLoading(true);
 
+    // Update and convert conversation to ollama format.
+    let ollamaMessages = messages.map((item) => {
+      return { role: item.from == "ai" ? "assistant" : item.from, content: item.text };
+    });
+    const newMessage = { role: "user", content: message }
+    ollamaMessages.push(newMessage);
+
     // send message to the server
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_PATH}/api/chat`,
@@ -25,7 +32,7 @@ export const useChat = () => {
           "Content-Type": "application/json",
           Accept: "application/json, text/plain, */*",
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ messages: ollamaMessages }),
       }
     );
 
