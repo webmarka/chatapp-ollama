@@ -9,17 +9,58 @@
 .humanChatMessage {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 12px 0;
+  gap: 20px;
+  margin: 20px 0;
   justify-content: right;
 }
 
+.aiChatMessage .messageText {
+	margin-left: 10px;
+}
+.aiChatMessage .messageText::after {
+	border-left: 10px solid transparent;
+	left: -10px;
+}
+.humanChatMessage .messageText {
+	margin-right: 45px;
+}
+.humanChatMessage .messageText::before {
+  right: -45px;
+  background-image: url(http://localhost:3001/ollama.png);
+}
+.humanChatMessage .messageText::after {
+	border-right: 10px solid transparent;
+	right: -10px;
+}
+
+
 .messageText {
-  padding: 12px 24px;
-  border-radius: 25px;
+  padding: 14px;
+  border-radius: 10px;
   max-width: 800px;
   line-height: 1.4em;
   white-space: pre-wrap;
+
+  position: relative;
+  clear: both;
+  
+}
+.messageText::before {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  content: '';
+  background-size: cover;
+}
+.messageText::after {
+  position: absolute;
+  top: 10px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid rgba(25, 147, 147, 0.2);
 }
 
 .humanChatMessage .messageText {
