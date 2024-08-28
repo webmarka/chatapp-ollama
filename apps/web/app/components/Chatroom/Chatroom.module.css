@@ -9,7 +9,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  --background: transparent;
+  --foreground: transparent;
+
+  background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+  background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+
+.theme-blue {
+  .chatroom {
+    --background: transparent;
+    --foreground: transparent;
+
+    background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .chatCardContent {

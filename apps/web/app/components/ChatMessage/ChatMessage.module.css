@@ -24,10 +24,15 @@
 
 .humanChatMessage .messageText {
   background-color: #b0ff92;
+  background-color: rgba(25, 147, 147, 0.2);
+  
+  color: #0EC879;
 }
 
 .aiChatMessage .messageText {
   background-color: #f2f2f2;
+  background-color: rgba(25, 147, 147, 0.1);
+  color: #0AD5C1;
 }
 
 .aiChatMessage .messageText ul {

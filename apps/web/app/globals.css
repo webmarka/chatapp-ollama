@@ -1,12 +1,40 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    .theme-default
+    {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    .theme-blue
+    {
+      --background: transparent;
+      --foreground: transparent;
+
+      background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+      background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   }
 }
 

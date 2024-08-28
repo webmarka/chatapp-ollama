@@ -1,5 +1,6 @@
 .header {
   background-color: #e0e1dd;
+  background-color: transparent;
   border-radius: 25px 25px 0 0;
   padding: 12px 24px;
   display: flex;
@@ -7,6 +8,7 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: 18px;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {

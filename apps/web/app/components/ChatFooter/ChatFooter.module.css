@@ -8,11 +8,14 @@
   gap: 10px;
   width: 100%;
   background-color: #e0e1dd;
+  background-color: transparent;
+  color: white;
   border-radius: 0 0 25px 25px;
 }
 
 .messageInput {
   flex-grow: 1;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

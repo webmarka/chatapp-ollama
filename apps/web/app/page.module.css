@@ -5,8 +5,9 @@ html {
 body {
   background-color: black;
   min-height: 100%;
-  font-family: Arial, sans-serif;
   color: black;
+  color: white;
+  font: 12px/16px "Noto Sans", sans-serif;
 }
 
 .chatroom {
